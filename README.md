@@ -106,6 +106,19 @@ Notice::project()->created($data);
 ```
 
 ## Output
+
+##### How to test
+
+Note : Flash notification and badge in top right corner, appear when there are some unread notification. To mark as read, currently just click link "Mark all as read" in notification icon (top right corner).
+
+1. Open 3 different browsers or perhaps can in 3 private tabs. So it will have 3 different sessions.
+2. Each login with path : /loginascompany, /loginasexpert, /loginasdeveloper
+3. Try to trigger the activities in the menu, such as "Project created", login as Company.
+4. Refresh the expert page, it will get notified. Also email send to the expert email.
+5. Next try to trigger 'Project taken' by expert page.
+6. Refresh company page, then it will get notified.
+7. So on, and for text notification in top right corner, can check 'Mark all as read', the current user will not get notified again.
+
 ##### Flash Notification
 To display notification in views just put this code before </body> tag or anywhere should be ok. This is generated a script block to check unread.
 
